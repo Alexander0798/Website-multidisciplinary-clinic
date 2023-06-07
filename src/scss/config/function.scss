@@ -1,0 +1,10 @@
+@use 'sass:math';
+$root-font-size: 16;
+
+@function rem($size) {
+    @return calc($size / $root-font-size) * 1rem;
+}
+
+@function em($size) {
+    @return calc($size / $root-font-size) * 1em;  
+}  

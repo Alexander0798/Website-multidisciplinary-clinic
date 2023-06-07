@@ -1,0 +1,16 @@
+@use "../vendor/normalize.css";
+@use "./fonts";
+@use "./base/_root.scss";
+@use "./base/_page.scss";
+@use "./base/_header.scss";
+@use "./base/_main.scss";
+@use "./base/technologies.scss";
+@use "./base/about";
+@use "./components/slider-about.scss";
+@use "./components/card-about.scss";
+@use "./base/industrial.scss";
+@use "./components/industrial-card.scss";
+@use './base/projects.scss';
+@use './components/projects-cards.scss';
+@use "./base/_footer.scss";
+
