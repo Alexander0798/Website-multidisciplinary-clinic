@@ -1,0 +1,159 @@
+@import "../config/function.scss";
+@import "../config/constant.scss";
+
+.header {
+    &__wrapper {
+        display: grid;
+        grid-template-areas:
+            "header-burger header-logo header-tel"
+            "header-burger header-logo header-link-address";
+        grid-template-columns: repeat(2, min-content) auto;
+        grid-template-rows: repeat(2, auto);
+        align-items: center;
+        padding: rem(13) rem(17);
+        gap: 0 rem(20);
+    }
+    &__burger {
+        position: relative;
+        width: rem(37);
+        height: rem(26);
+        grid-area: header-burger;
+        display: flex;
+        align-items: center;
+        transition: all 0.5s linear;
+    }
+    &__burger-line {
+        width: 100%;
+        height: rem(4);
+        background-color: $middle-theme;
+        transition: all 0.2s linear;
+
+        &_active {
+            background: transparent;
+        }
+        &::after,
+        &::before {
+            content: "";
+            width: 100%;
+            height: rem(4);
+            background-color: $middle-theme;
+            position: absolute;
+            transition: all 0.2s linear;
+        }
+        &::before {
+            top: 0;
+        }
+        &_active::before {
+            top: 50%;
+            transform: rotate(45deg) translate(rem(0), -60%);
+        }
+        &::after {
+            bottom: 0;
+        }
+        &_active::after {
+            bottom: 50%;
+            transform: rotate(-45deg) translate(rem(0), 60%);
+        }
+        &_active {
+            margin: 0 rem(20) 0 auto;
+        }
+    }
+
+    &__logo {
+        width: rem(62);
+        height: rem(18.32);
+        grid-area: header-logo;
+    }
+
+    &__link-address {
+        grid-area: header-link-address;
+        justify-self: end;
+    }
+
+    &__city {
+        grid-area: header-city;
+        font-weight: 400;
+        font-size: rem(13);
+        line-height: rem(17);
+        white-space: nowrap;
+    }
+
+    &__street {
+        display: none;
+        grid-area: header-street;
+    }
+
+    &__link-tel {
+        grid-area: header-tel;
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: rem(21);
+        white-space: nowrap;
+        justify-self: end;
+    }
+    &__button-record {
+        grid-area: header-record;
+        white-space: nowrap;
+        display: none;
+    }
+    &__nav {
+        grid-area: nav;
+    }
+}
+
+@media (min-width: em(375)) {
+    .header {
+        gap: 0 rem(49);
+    }
+}
+@media (min-width: em(640)) {
+    .header {
+        &__wrapper {
+            padding: rem(10);
+            margin: 0 auto;
+            max-width: rem(1140);
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        &__burger {
+            display: none;
+        }
+
+        &__logo {
+            width: rem(91.04);
+            height: rem(26.9);
+            margin: 0 rem(43.55) 0 0;
+        }
+
+        &__link-address {
+            justify-self: end;
+        }
+
+        &__city {
+            font-size: rem(14);
+            line-height: rem(21);
+        }
+
+        &__street {
+            display: block;
+            color: $grey-text;
+        }
+
+        &__link-tel {
+            font-weight: 400;
+            margin: 0 rem(35) 0 auto;
+        }
+        &__button-record {
+            display: flex;
+            color: $white;
+            background: $light-theme;
+        }
+    }
+}
+@media (min-width: em(1140)) {
+   .header {
+    
+   }
+}

@@ -1,0 +1,70 @@
+@import "../config/function.scss";
+@import "../config/constant.scss";
+
+.slider {
+    margin: rem(40) rem(18) 0;
+
+    &__button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 rem(36);
+    }
+
+    &__button {
+    }
+
+    &__numbering {
+    }
+
+    &__value {
+    }
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    &__img {
+        width: 100%;
+    }
+    &__info {
+        padding: rem(22) rem(42) rem(27) rem(23);
+        background: $slideBg;
+    }
+    &__title {
+        margin: 0 0 rem(5);
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: rem(14);
+        line-height: rem(18);
+        margin: 0 0 rem(12);
+    }
+
+    &__list {
+        font-size: rem(14);
+        line-height: 145%;
+        padding: 0 0 0 rem(9);
+        margin: 0 0 rem(17);
+    }
+    &__item {
+    }
+    &__price {
+        margin: 0 0 rem(27);
+        font-size: rem(18);
+        line-height: rem(23);
+    }
+
+    &__old-price {
+        font-size: rem(14);
+        line-height: rem(18);
+        text-decoration-line: line-through;
+    }
+
+    &__button-container {
+    }
+
+    &__button {
+    }
+}
