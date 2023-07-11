@@ -4,189 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./vendor/normalize.css" /> -->
     <link rel="stylesheet" href="./css/index.min.css">
-    <title>ITMO</title>
+    <title>multidisciplinary-clinic</title>
 </head>
     <body class="root">
         <div class="page">
-            <header class="header">
-    <button class="header__button">
-      <span class="header__button-icon"></span>
-    </button>
-    <a href="#" class="header__logo-link"></a>
-    <nav class="header__navigation">
-      <ul class="header__list">
-        <li class="header__item">
-          <a href="#" class="header__link">О нас</a>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Лаборатория</a>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Проекты</a>
-        </li>
-        <li class="header__item" id="education">
-          <a href="#" class="header__link">Образование</a>
-          <ul class="header__sub-list">
-            <li class="header__sub-item">
-              <a href="#" class="header__sub-link">Аспирантура</a>
-            </li>
-            <li class="header__sub-item">
-              <a href="#" class="header__sub-link">Магистратура</a>
-            </li>
-          </ul>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Публикации</a>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Команда</a>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Связаться</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-            <main>
-                <section class="technologies">
-    <div class="technologies__content">
-      <h1 class="technologies__title">
-        Когнитивные технологии, <span class="technologies__title_normal">машинное обучение</span> 
-      </h1>
-      <p class="technologies__sub-title">
-        Системы прикладного искусственного интеллекта
-      </p>
-      <button class="technologies__button">НАШИ ПРОЕКТЫ</button>
+            <header class="header"> 
+    <div class="header__wrapper">
+        <div class="header__burger"><span class="header__burger-line"></span></div>
+        <img src="./img/header/logo.png" alt="логотип" class="header__logo" />
+        <a href="#" class="header__link-address link" target="_blank"
+            ><div class="header__city">Ростов на дону <span class="header__street">ул. Ленина, 2Б</span></div></a
+        >
+        <a href="tel:+78630000000" class="header__link-tel link">+7(863) 000 00 00</a>
+        <button class="header__button-record button-record" type="button">Записаться на приём</button>
     </div>
-  </section>
-                <section class="about">
-    <h2 class="about__title">Несколько слов о нас</h2>
-    <p class="about__sub-title">
-        Национальный центр когнитивных разработок – центр национальной технологической инициативы (НТИ), получивший государственную поддержку по направлению «Технологии машинного
-        обучения и когнитивные технологии».
-    </p>
-    <div class="about__slider slider-about">
-        <button class="slider-about__button slider-about__button_left">&larr;</button>
-        <div class="slider-about__cards">
-            <div class="slider-about__card-container">
-                <div class="slider-about__card card-about">
-                    <img src="./img/about/pushpin.svg" alt="иконка закрепки" class="card-about__icon" />
-                    <p class="card-about__date">Понедельник, 5 июля 2021г</p>
-                    <h3 class="card-about__title">ЗНАКОМСТВО С МАШИННЫМ ОБУЧЕНИЕМ: СТУДЕНТЫ ЕВРАЗИЙСКОГО НАЦИОНАЛЬ…</h3>
-                    <p class="card-about__description">
-                        Университет ИТМО провел научно-исследовательскую стажировку для группы магистрантов из Евразийского национального университета имени Л.Н. Гумилева. Ведущие
-                        преподаватели в течение десяти дней рассказывали им об основах машинного обучения.
-                    </p>
-                </div>
-                <div class="slider-about__card card-about">
-                    <img src="./img/about/pushpin.svg" alt="иконка закрепки" class="card-about__icon" />
-                    <p class="card-about__date">Понедельник, 5 июля 2021г</p>
-                    <h3 class="card-about__title">ЗНАКОМСТВО С МАШИННЫМ ОБУЧЕНИЕМ: СТУДЕНТЫ ЕВРАЗИЙСКОГО НАЦИОНАЛЬ…</h3>
-                    <p class="card-about__description">
-                        Университет ИТМО провел научно-исследовательскую стажировку для группы магистрантов из Евразийского национального университета имени Л.Н. Гумилева. Ведущие
-                        преподаватели в течение десяти дней рассказывали им об основах машинного обучения.
-                    </p>
-                </div>
-                <div class="slider-about__card card-about">
-                    <img src="./img/about/pushpin.svg" alt="иконка закрепки" class="card-about__icon" />
-                    <p class="card-about__date">Понедельник, 5 июля 2021г</p>
-                    <h3 class="card-about__title">ЗНАКОМСТВО С МАШИННЫМ ОБУЧЕНИЕМ: СТУДЕНТЫ ЕВРАЗИЙСКОГО НАЦИОНАЛЬ…</h3>
-                    <p class="card-about__description">
-                        Университет ИТМО провел научно-исследовательскую стажировку для группы магистрантов из Евразийского национального университета имени Л.Н. Гумилева. Ведущие
-                        преподаватели в течение десяти дней рассказывали им об основах машинного обучения.
-                    </p>
-                </div>
-                <div class="slider-about__card card-about">
-                    <img src="./img/about/pushpin.svg" alt="иконка закрепки" class="card-about__icon" />
-                    <p class="card-about__date">Понедельник, 5 июля 2021г</p>
-                    <h3 class="card-about__title">ЗНАКОМСТВО С МАШИННЫМ ОБУЧЕНИЕМ: СТУДЕНТЫ ЕВРАЗИЙСКОГО НАЦИОНАЛЬ…</h3>
-                    <p class="card-about__description">
-                        Университет ИТМО провел научно-исследовательскую стажировку для группы магистрантов из Евразийского национального университета имени Л.Н. Гумилева. Ведущие
-                        преподаватели в течение десяти дней рассказывали им об основах машинного обучения.
-                    </p>
-                </div>
+    <nav class="header__nav nav">
+        <div class="width-wrapper">
+            <ul class="nav__list list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link link" id="about">О клинике</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link link" id="services">Услуги</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link link" id="Specialists">Специалисты</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link link" id="price">Цены</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link link">Контакты</a>
+                </li>
+                <li class="nav__item">
+                    <button class="nav__button-record button-record" type="button">Записаться на приём</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+            <main class="main"> <div class="about">
+    <img class="about__img" src="./img/about/foto_clinic.jpg" alt="фото клиники" />
+    <div class="about__wrapper width-wrapper">
+        <div class="about__text">
+            <h1 class="about__title">Многопрофильная клиника для детей и&nbsp;взрослых</h1>
+            <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaF</p>
+        </div>
+    </div>
+</div>
+ <div class="slider">
+ <div class="slider__container"></div>
+    <div class="slider__nav">
+        <button class="slider__button button" id="button-back">&larr;</button>
+        <div class="slider__numbering">
+            <span class="slider__value" id="current-slide"></span><span class="slider__value slider__value_gray" id="total-slides"></span>
+        </div>
+        <button class="slider__button button" id="button-next">&rarr;</button>
+    </div>
+</div>
+</main>
+            <footer class="footer">
+    <div class="footer__wrapper width-wrapper">
+        <img src="./img/footer/logo.svg" alt="logo" class="footer__logo" />
+        <nav class="footer__nav">
+            <ul class="footer__list list">
+                <li class="footer__item"><a href="#" class="footer__link link">О клинике</a></li>
+                <li class="footer__item"><a href="#" class="footer__link link">Услуги</a></li>
+                <li class="footer__item"><a href="#" class="footer__link link">Специалисты</a></li>
+                <li class="footer__item"><a href="#" class="footer__link link">Цены</a></li>
+                <li class="footer__item"><a href="#" class="footer__link link">Контакты</a></li>
+            </ul>
+        </nav>
+        <ul class="footer__list-redirect list">
+            <li class="footer__item-redirect">
+                <a href="#" class="footer__link-redirect link"
+                    ><img src="./img/footer/instagram_icon.png" alt="redirect instagram" class="footer__img-redirect"
+                /></a>
+            </li>
+            <li class="footer__item-redirect">
+                <a href="#" class="footer__link-redirect link"
+                    ><img src="./img/footer/whatsapp_icon.png" alt="redirect whatsapp" class="footer__img-redirect"
+                /></a>
+            </li>
+            <li class="footer__item-redirect">
+                <a href="#" class="footer__link-redirect link"
+                    ><img src="./img/footer/telegram_icon.png" alt="redirect telegram" class="footer__img-redirect"
+                /></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+        </div>
+        <template id="template-slide"> 
+    <div class="slider__slide slide">
+        <div class="slide__container"><img src="./img/slide-img/slide-img_1.jpg" alt="картинка слайдна" class="slide__img" /></div>
+
+        <div class="slide__info">
+            <h2 class="slide__title"></h2>
+            <div class="slide__subtitle"></div>
+            <ul class="slide__list list">
+            </ul>
+            <div class="slide__price"><span class="slide__old-price"></span></div>
+            <div class="slide__button-container">
+                <button class="slide__button slide__button-record button">Записаться</button>
+                <button class="slide__button slide__button-details button">Подробнее</button>
             </div>
         </div>
-        <button class="slider-about__button slider-about__button_right">&rarr;</button>
     </div>
-    <div class="about__slider-navigation slider-navigation">
-        <a href="#" class="slider-navigation__stage slider-navigation__stage_active"></a><a href="#" class="slider-navigation__stage"></a><a href="#" class="slider-navigation__stage"></a
-        ><a href="#" class="slider-navigation__stage"></a>
-    </div>
-</section>
-
-                <section class="industrial">
-    <h2 class="industrial__title">INDUSTRIAL AI RESEARCH LAB</h2>
-    <div class="industrial__info">
-        <div class="industrial__discription">
-            <p class="industrial__text">
-                Центр национальной технологической инициативы (НТИ), получивший государственную поддержку по направлению «Технологии машинного обучения и когнитивные технологии».
-            </p>
-            <p class="industrial__text">
-                Мы изучаем проблемы и выявляем, когда мы работаем вместе с нашими клиентами, новые решения находят, не задумываясь. Работая таким образом и проявляя гибкость, мы
-                можем поддерживать новый подход для удовлетворения потребностей наших клиентов.
-            </p>
-        </div>
-        <div class="industrial__img-container">
-            <img class="industrial__img industrial__img_invisible" src="./img/industrial/image_38.jpg" alt="" />
-            <img class="industrial__img" src="./img/industrial/image_35.jpg" alt="" />
-        </div>
-    </div>
-    <div class="industrial__cards">
-        <div class="industrial__card industrial-card industrial-card_project">
-            <h3 class="industrial-card__title">Анализ социальных данных</h3>
-            <div class="industrial-card__container_img"><img src="./img/industrial/project-icon.svg" alt="" class="industrial-card__img" /></div>
-            <p class="industrial-card__description">Направление включает в&nbspсебя исследования и разработки технологий МО и КТ</p>
-            <a href="#" class="industrial-card__button">Подробнее</a>
-        </div>
-        <div class="industrial__card industrial-card industrial-card_brain">
-            <h3 class="industrial-card__title">Инфраструктура больших данных</h3>
-            <div class="industrial-card__container_img"><img src="./img/industrial/brain-icon.svg" alt="" class="industrial-card__img" /></div>
-            <p class="industrial-card__description">Направление включает в&nbspсебя исследования и разработки технологий МО и КТ</p>
-            <a href="#" class="industrial-card__button">Подробнее</a>
-        </div>
-        <div class="industrial__card industrial-card industrial-card_micro">
-            <h3 class="industrial-card__title">Облачные вычисления</h3>
-            <div class="industrial-card__container_img"><img src="./img/industrial/micro-icon.svg" alt="" class="industrial-card__img" /></div>
-            <p class="industrial-card__description">Направление включает в&nbspсебя исследования и разработки технологий МО и КТ</p>
-            <a href="#" class="industrial-card__button">Подробнее</a>
-        </div>
-        <div class="industrial__card industrial-card industrial-card_robot">
-            <h3 class="industrial-card__title">QA<br>cистемы</h3>
-            <div class="industrial-card__container_img"><img src="./img/industrial/robot-icon.svg" alt="" class="industrial-card__img" /></div>
-            <p class="industrial-card__description">Направление включает в&nbspсебя исследования и разработки технологий МО и КТ</p>
-            <a href="#" class="industrial-card__button">Подробнее</a>
-        </div>
-    </div>
-</section>
-
-                <section class="projects">
-    <h2 class="projects__title">Наши Проекты</h2>
-    <button class="projects__select">ВСЕ ПРОЕКТЫ</button>
-    <nav class="projects__navigation">
-        <ul class="projects__list">
-            <li class="projects__item"><a href="#" class="projects__link">ВСЕ ПРОЕКТЫ</a></li>
-            <li class="projects__item"><a href="#" class="projects__link">ГОС. ПРОЕКТЫ</a></li>
-            <li class="projects__item"><a href="#" class="projects__link">СПЕЦПРОГРАММЫ</a></li>
-            <li class="projects__item"><a href="#" class="projects__link">В РАЗРАБОТКЕ</a></li>
-        </ul>
-    </nav>
-    <ul class="projects__cards">
-        <li class="projects-cards__card projects-card">
-            <img src="#" alt="" class="projects-card__logo" />
-            <p class="projects-card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum deserunt temporibus? Veniam maxime vel nulla! Exercitationem quod soluta adipisci aspernatur est repellendus odit cupiditate enim, corporis voluptates molestias id.</p>
-            <button class="projects-card__button">&rarr;</button>
-        </li>
-   
-    </ul>
-</section>
-
-            </main>
-            <footer></footer>
-
-        </div>
+</template>
         <script src="js/app.min.js"></script>
     </body>
 </html>

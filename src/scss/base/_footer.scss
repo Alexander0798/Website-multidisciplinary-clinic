@@ -1,0 +1,97 @@
+@import "../config/constant";
+@import "../config/function";
+.footer {
+    width: 100%;
+    background: $footerBg;
+    &__wrapper {
+        padding: rem(41) rem(17);
+        display: grid;
+        grid-template-areas:
+            "footerLogo footerRedirect"
+            "footerNav .";
+        gap: rem(31) 0;
+    }
+    &__logo {
+        grid-area: footerLogo;
+        width: rem(91.04);
+        height: rem(26.9);
+    }
+
+    &__nav {
+        color: $white;
+        grid-area: footerNav;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15) 0;
+    }
+
+    &__item {
+        font-size: rem(14);
+        line-height: rem(18);
+    }
+
+    &__link {
+    }
+
+    &__list-redirect {
+        grid-area: footerRedirect;
+        display: flex;
+        gap: 0 rem(20);
+        justify-content: flex-end;
+    }
+
+    &__item-redirect {
+    }
+
+    &__link-redirect {
+    }
+
+    &__img-redirect {
+        width: rem(24);
+        height: rem(23);
+    }
+}
+@media (min-width: em(740)) {
+    .footer {
+       
+        &__wrapper {
+            grid-template-areas: "footerLogo footerNav footerRedirect";
+        }
+
+        &__logo {
+        }
+
+        &__nav {
+        }
+
+        &__list {
+            flex-direction: row;
+            gap: 0 rem(15);
+            justify-content: flex-end;
+        }
+
+        &__item {
+            font-size: rem(16);
+            line-height: rem(24);
+        }
+
+        &__link {
+        }
+
+        &__list-redirect {
+            gap: 0 rem(15);
+        }
+
+        &__item-redirect {
+        }
+
+        &__link-redirect {
+        }
+
+        &__img-redirect {
+        }
+    }
+}

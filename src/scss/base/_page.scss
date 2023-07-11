@@ -1,8 +1,10 @@
+@import "../config/function.scss";
+
 .page {
-    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    margin: 0 auto;
-    max-width: 1440px;
-    min-width: 320px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }

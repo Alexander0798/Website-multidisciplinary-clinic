@@ -1,0 +1,14 @@
+@import "../config/function.scss";
+.button-record {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    min-width: rem(196);
+    min-height: rem(43);
+    border-radius: rem(50);
+    border: none;
+    font-size: rem(14);
+    line-height: rem(21);
+    cursor: pointer;
+}
