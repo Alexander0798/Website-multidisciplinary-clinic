@@ -6,4 +6,4 @@
 * slider, валидация и отправка формы - js oоп
 * БУДЕТ СДЕЛАНО В БЛИЖАЙШЕЕ ВРЕМЯ - сервер, подтягивать информацию о слайдас с базы данных на фронт, отправка данных формы на email - php
 
-### Сайт загружен на сервер и доступен по ссылке http://z95151pl.beget.tech/
+### [Ссылка на Проект - Multidisciplinary clinic](https://website-multidisciplinary-clinic-i4eb.vercel.app/)
