@@ -6,7 +6,7 @@ export const data = [
         services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
         price: 2800,
         old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
+        img: "./img/slide-img/slide-img_1.jpg",
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const data = [
         services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
         price: 2800,
         old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
+        img: "./img/slide-img/slide-img_1.jpg",
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const data = [
         services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
         price: 2800,
         old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
+        img: "./img/slide-img/slide-img_1.jpg",
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export const data = [
         services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
         price: 2800,
         old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
+        img: "./img/slide-img/slide-img_1.jpg",
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ export const data = [
         services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
         price: 2800,
         old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
+        img: "./img/slide-img/slide-img_1.jpg",
     },
 ];
 
