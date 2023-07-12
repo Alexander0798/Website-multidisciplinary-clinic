@@ -1,124 +1,103 @@
 import * as flsFunction from "./modules/function.js";
 import { Slide } from "./components/Slide.js";
-flsFunction.isWebp();
-const data = [
-    {
-        id: 1,
-        check: "check-up",
-        floor: "для мужчин",
-        services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
-        price: 2800,
-        old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
-    },
-    {
-        id: 2,
-        check: "check-up2",
-        floor: "для мужчин",
-        services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
-        price: 2800,
-        old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
-    },
-    {
-        id: 3,
-        check: "check-up3",
-        floor: "для мужчин",
-        services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
-        price: 2800,
-        old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
-    },
-    {
-        id: 4,
-        check: "check-up4",
-        floor: "для мужчин",
-        services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
-        price: 2800,
-        old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
-    },
-    {
-        id: 5,
-        check: "check-up5",
-        floor: "для мужчин",
-        services: "Гормональный скрининг; Тестостерон; Свободный тестостерон; Глобулин, связывающий половые гормоны;",
-        price: 2800,
-        old_price: 3500,
-        img: "../img/slide-img/slide-img_1.jpg",
-    },
-];
-const page = document.querySelector(".page");
-const slideTemplate = document.querySelector("#template-slide");
-const slideSelector = ".slide";
-const buttonBurger = page.querySelector(".header__burger");
-const navigate = page.querySelector(".nav");
-const burgerLine = buttonBurger.querySelector(".header__burger-line");
-const slideContainer = page.querySelector(".slider__container");
-const currentSlide = page.querySelector("#current-slide");
-const totalSlides = page.querySelector("#total-slides");
+import { PopupFormRecord } from "./components/PopupFormRecord.js";
+import { RecordValidation } from "./components/RecordValidation.js";
+import {
+    data,
+    root,
+    slideTemplate,
+    buttonBurger,
+    navigate,
+    burgerLine,
+    slideContainer,
+    currentSlide,
+    totalSlides,
+    popupRecordSelector,
+    buttonSlideNext,
+    buttonSlideBack,
+    buttonsRecords,
+    popupRecordForm,
+    configValidationRecord,
+} from "./utils/utils.js";
 
-const buttonSlideNext = page.querySelector("#button-next");
-const buttonSlideBack = page.querySelector("#button-back");
+flsFunction.isWebp();
+
+let slideIndex = 0;
 
 buttonBurger.addEventListener("click", () => {
     burgerLine.classList.toggle("header__burger-line_active");
     navigate.classList.toggle("nav_active");
 });
 
-let slideIndex = 0;
+const popupFormRecord = new PopupFormRecord({
+    popupSelector: popupRecordSelector,
+    popupForm: popupRecordForm,
+    popupInputClass: ".popup__input",
+    handleSubmit: (data) => {
+        console.log(data);
+        popupFormRecord.close();
+    },
+});
+popupFormRecord.setEventListeners();
+
+const recordValidation = new RecordValidation({ ...configValidationRecord });
+
+recordValidation.enableValidation();
+
+buttonsRecords.forEach((button) =>
+    button.addEventListener("mousedown", () => {
+        popupFormRecord.open();
+        recordValidation.resetForm();
+    })
+);
 
 const renderSlide = (transform) => {
-    const slide = new Slide(slideTemplate, slideSelector, data[slideIndex]);
+    const slide = new Slide(data[slideIndex], {
+        slideTemplate: slideTemplate,
+        slideClass: ".slide",
+        handleRecord: () => {
+            popupFormRecord.open();
+            recordValidation.resetForm();
+        },
+    });
     slideContainer.append(slide.generateSlide());
     currentSlide.textContent = slideIndex + 1;
     totalSlides.textContent = `/${data.length}`;
     if (transform) {
-        transform()
+        transform();
     }
 };
 renderSlide();
 
-buttonSlideNext.addEventListener("click", () => {
-    const slideElement = page.querySelector(".slide");
-    slideElement.style.transform = "translateX(-200%)";
+const transformSlide = (position) => {
+    const slideElement = root.querySelector(".slide");
+    slideElement.style.transform = `translateX(${position})`;
     slideElement.style.transition = "transform 0.5s";
+};
+const newSlide = (startPosition) => {
+    setTimeout(() => {
+        slideContainer.innerHTML = "";
+        renderSlide(() => {
+            transformSlide(startPosition);
+        });
+        setTimeout(() => {
+            transformSlide("0");
+        }, 50);
+    }, 300);
+};
+buttonSlideNext.addEventListener("click", () => {
+    transformSlide("-200%");
     slideIndex = ++slideIndex;
     if (slideIndex >= data.length) {
         slideIndex = 0;
     }
-    setTimeout(() => {
-        slideContainer.innerHTML = "";
-        renderSlide(() => {
-            const slideElement = page.querySelector(".slide");
-            slideElement.style.transform = "translateX(200%)";
-            slideElement.style.transition = "transform 0.5s";
-        });
-        setTimeout(() => {
-            const slideElement = page.querySelector(".slide");
-            slideElement.style.transform = "translateX(0)";
-        }, 50);
-    }, 300);
+    newSlide("200%");
 });
 buttonSlideBack.addEventListener("click", () => {
-    const slideElement = page.querySelector(".slide");
-    slideElement.style.transform = "translateX(200%)";
-    slideElement.style.transition = "transform 0.5s";
+    transformSlide("200%");
     slideIndex = slideIndex - 1;
-    console.log(slideIndex);
     if (slideIndex < 0) {
         slideIndex = data.length - 1;
     }
-    setTimeout(() => {
-        slideContainer.innerHTML = "";
-        renderSlide(() => {
-            const slideElement = page.querySelector(".slide");
-            slideElement.style.transform = "translateX(-200%)";
-            slideElement.style.transition = "transform 0.5s";
-        });
-        setTimeout(() => {
-            const slideElement = page.querySelector(".slide");
-            slideElement.style.transform = "translateX(0)";
-        }, 50);
-    }, 300);
+    newSlide("-200%");
 });

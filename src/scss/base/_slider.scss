@@ -9,17 +9,20 @@
         justify-content: center;
         align-items: center;
         gap: 0 rem(36);
-        margin: rem(22) 0 rem(35)
+        margin: rem(22) 0 rem(35);
     }
     &__value_gray {
         color: $color-slider-nav;
-        opacity: .6;
+        opacity: 0.6;
     }
     &__button {
         font-size: rem(40);
         color: $color-slider-nav;
+        transition: all ease 0.4s;
     }
-
+    &__button:hover {
+        opacity: 0.7;
+    }
     &__numbering {
     }
 
@@ -31,7 +34,7 @@
         max-width: rem(1140);
         margin: 0 auto;
         &__nav {
-            margin: rem(34) 0 rem(92)
+            margin: rem(34) 0 rem(92);
         }
     }
 }

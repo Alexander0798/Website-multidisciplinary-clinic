@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.min.css" />
     <title>multidisciplinary-clinic</title>
 </head>
+
     <body class="root">
         <div class="page">
-            <header class="header"> 
+            <header class="header">
     <div class="header__wrapper">
         <div class="header__burger"><span class="header__burger-line"></span></div>
         <img src="./img/header/logo.png" alt="логотип" class="header__logo" />
@@ -17,7 +18,7 @@
             ><div class="header__city">Ростов на дону <span class="header__street">ул. Ленина, 2Б</span></div></a
         >
         <a href="tel:+78630000000" class="header__link-tel link">+7(863) 000 00 00</a>
-        <button class="header__button-record button-record" type="button">Записаться на приём</button>
+        <button class="header__button-record button-record button" type="button">Записаться на приём</button>
     </div>
     <nav class="header__nav nav">
         <div class="width-wrapper">
@@ -38,24 +39,26 @@
                     <a href="#" class="nav__link link">Контакты</a>
                 </li>
                 <li class="nav__item">
-                    <button class="nav__button-record button-record" type="button">Записаться на приём</button>
+                    <button class="nav__button-record button-record button" type="button">Записаться на приём</button>
                 </li>
             </ul>
         </div>
     </nav>
 </header>
 
-            <main class="main"> <div class="about">
+            <main class="main"><div class="about">
     <img class="about__img" src="./img/about/foto_clinic.jpg" alt="фото клиники" />
     <div class="about__wrapper width-wrapper">
         <div class="about__text">
             <h1 class="about__title">Многопрофильная клиника для детей и&nbsp;взрослых</h1>
-            <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaF</p>
+            <p class="about__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaF
+            </p>
         </div>
     </div>
 </div>
  <div class="slider">
- <div class="slider__container"></div>
+    <div class="slider__container"></div>
     <div class="slider__nav">
         <button class="slider__button button" id="button-back">&larr;</button>
         <div class="slider__numbering">
@@ -98,15 +101,34 @@
 </footer>
 
         </div>
-        <template id="template-slide"> 
+        <div class="popup">
+    <div class="popup__container">
+        <button type="button" class="popup__button-close">&#10006;</button>
+        <form action="#" class="popup__form">
+            <label class="popup__label">
+                <input type="text" name="name" id="input-name" class="popup__input" placeholder="Как Вас зовут?" />
+                <span class="popup__error"></span>
+            </label>
+            <label class="popup__label">
+                <input type="tel" name="tel" id="input-tel" class="popup__input" placeholder="Введите ваш номер телефона" />
+                <span class="popup__error"></span>
+            </label>
+            <label class="popup__label">
+                <input type="email" name="email" id="input-email" class="popup__input" placeholder="Введите ваш email" />
+                <span class="popup__error"></span>
+            </label>
+            <button type="submit" name="buttonSubmit" class="popup__button" id="button-submit">Записаться на приём</button>
+        </form>
+    </div>
+</div>
+ <template id="template-slide">
     <div class="slider__slide slide">
         <div class="slide__container"><img src="./img/slide-img/slide-img_1.jpg" alt="картинка слайдна" class="slide__img" /></div>
 
         <div class="slide__info">
             <h2 class="slide__title"></h2>
             <div class="slide__subtitle"></div>
-            <ul class="slide__list list">
-            </ul>
+            <ul class="slide__list list"></ul>
             <div class="slide__price"><span class="slide__old-price"></span></div>
             <div class="slide__button-container">
                 <button class="slide__button slide__button-record button">Записаться</button>
@@ -115,6 +137,7 @@
         </div>
     </div>
 </template>
+
         <script src="js/app.min.js"></script>
     </body>
 </html>

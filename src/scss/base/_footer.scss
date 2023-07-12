@@ -56,7 +56,6 @@
 }
 @media (min-width: em(740)) {
     .footer {
-       
         &__wrapper {
             grid-template-areas: "footerLogo footerNav footerRedirect";
         }
